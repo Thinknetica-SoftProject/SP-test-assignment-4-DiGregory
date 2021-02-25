@@ -11,3 +11,11 @@
 ## Решение:
 
 
+File.open("./data/3.txt", "r") do |f|
+  res = 0
+  for line in f.readlines() do
+    arr = line.split("\t").map(&:to_i)
+    res += (arr.max - arr.min)
+  end
+  puts res
+end

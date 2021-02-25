@@ -16,3 +16,14 @@
 #
 ## Решение:
 
+require 'digest/md5'
+hash = gets.chomp
+c = 1
+while 1 do
+  if (Digest::MD5.hexdigest(hash + c.to_s)[0..4] == "00000")
+    puts(c)
+    break
+  else
+    c += 1
+  end
+end

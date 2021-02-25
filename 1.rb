@@ -16,6 +16,20 @@
 #
 ## Решение:
 
+File.open("./data/1.txt", "r") do |f|
+
+  data = f.read
+  res = 0
+  for i in 0..data.size do
+    if (data[i] == "(")
+      res += 1;
+    end
+    if (data[i] == ")")
+      res -= 1;
+    end
+  end
+  puts res
+end
 
 
 
