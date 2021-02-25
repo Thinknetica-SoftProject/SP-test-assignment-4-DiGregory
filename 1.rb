@@ -22,7 +22,7 @@ File.open("./data/1.txt", "r") do |f|
   res = 0
   for i in 0..data.size do
     if (data[i] == "(")
-      res += 2;
+      res += 1;
     end
     if (data[i] == ")")
       res -= 1;
